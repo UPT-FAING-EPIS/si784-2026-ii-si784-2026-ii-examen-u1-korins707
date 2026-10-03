@@ -12,7 +12,7 @@ public class LocationConfiguration : IEntityTypeConfiguration<Location>
     /// <inheritdoc />
     public void Configure(EntityTypeBuilder<Location> builder)
     {
-        builder.ToTable("locations");
+        builder.ToTable("inv_locations");
         builder.HasKey(location => location.Id);
 
         builder.Property(location => location.Name)

@@ -12,7 +12,7 @@ public class DeviceConfiguration : IEntityTypeConfiguration<Device>
     /// <inheritdoc />
     public void Configure(EntityTypeBuilder<Device> builder)
     {
-        builder.ToTable("devices");
+        builder.ToTable("inv_devices");
         builder.HasKey(device => device.Id);
 
         builder.Property(device => device.Brand)
@@ -40,7 +40,7 @@ public class DeviceConfiguration : IEntityTypeConfiguration<Device>
             .HasMaxLength(500);
 
         builder.Property(device => device.PurchasePrice)
-            .HasPrecision(12, 2);
+            .HasColumnType("decimal(12,2)");
 
         builder.Property(device => device.EntryDate)
             .IsRequired();

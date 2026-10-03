@@ -6,6 +6,7 @@ using Inventario.Celulares.Infrastructure.Persistence;
 using Inventario.Celulares.Infrastructure.Security;
 using Inventario.Celulares.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,7 +32,9 @@ builder.Services.AddDbContext<InventarioDbContext>((serviceProvider, options) =>
             + "Defina ConnectionStrings__DefaultConnection en las variables de entorno.");
     }
 
-    options.UseNpgsql(connectionString);
+    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString),
+        mysqlOptions => mysqlOptions.EnableRetryOnFailure(3));
+    options.EnableDetailedErrors();
 });
 
 builder.Services.AddScoped<IInventoryService, InventoryService>();

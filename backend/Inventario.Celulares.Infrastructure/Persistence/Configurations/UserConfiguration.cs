@@ -12,7 +12,7 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
     /// <inheritdoc />
     public void Configure(EntityTypeBuilder<User> builder)
     {
-        builder.ToTable("users");
+        builder.ToTable("inv_users");
         builder.HasKey(user => user.Id);
 
         builder.Property(user => user.Username)

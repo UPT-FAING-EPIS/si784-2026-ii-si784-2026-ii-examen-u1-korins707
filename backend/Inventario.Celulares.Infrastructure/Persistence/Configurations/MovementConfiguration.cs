@@ -12,7 +12,7 @@ public class MovementConfiguration : IEntityTypeConfiguration<Movement>
     /// <inheritdoc />
     public void Configure(EntityTypeBuilder<Movement> builder)
     {
-        builder.ToTable("movements");
+        builder.ToTable("inv_movements");
         builder.HasKey(movement => movement.Id);
 
         builder.Property(movement => movement.Type)

@@ -8,6 +8,7 @@ control de stock, movimientos y reportes de dispositivos.
 | Entregable | Enlace |
 | --- | --- |
 | Aplicación publicada | https://inventario-celulares-beta.vercel.app |
+| API publicada | https://afford-performs-characteristic-poet.trycloudflare.com |
 | Repositorio | https://github.com/UPT-FAING-EPIS/si784-2026-ii-si784-2026-ii-examen-u1-korins707 |
 | SonarQube | Configurar la organización en https://sonarcloud.io y luego los secrets `SONAR_TOKEN`, `SONAR_ORG`, `SONAR_PROJECT_KEY` |
 
@@ -15,7 +16,7 @@ control de stock, movimientos y reportes de dispositivos.
 
 - **Backend:** .NET 8 Web API con EF Core 8 y PostgreSQL 16.
 - **Frontend:** React 18 + Vite + TypeScript estricto, routed con React Router.
-- **Base de datos:** relacional, con migraciones de EF Core aplicadas al arrancar.
+- **Base de datos:** MySQL 8.4 (relacional), con migraciones de EF Core aplicadas al arrancar.
 - **Despliegue:** frontend estático en Vercel; backend en contenedor Docker.
 
 ## Estructura del repositorio
