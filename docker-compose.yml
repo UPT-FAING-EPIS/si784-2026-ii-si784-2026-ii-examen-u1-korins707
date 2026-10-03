@@ -34,6 +34,7 @@ services:
       Cors__AllowedOrigins__0: http://localhost:5173
       Cors__AllowedOrigins__1: http://localhost:3000
       Cors__AllowedOrigins__2: http://localhost:4173
+      Cors__AllowedOrigins__3: https://inventario-celulares-beta.vercel.app
     ports:
       - "5080:8080"
 
